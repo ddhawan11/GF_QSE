@@ -1,0 +1,65 @@
+\documentclass{report}
+
+\usepackage{amsmath,amsfonts}
+
+\begin{document}
+
+\section{A module for QSE-based calculations \\
+of IPs and Green's function}
+
+Given a Hamiltonian,  $\hat{H}$, and a quantum circuit describing a preliminary VQE calculation
+for a system of $N$ particles, we can compute excited states in the $N-1$ particle sector formulating the following Ansatz
+\begin{equation}
+| \Psi_\mu \rangle = \sum_I c_{I\mu} \hat{E}_I | \Psi_{\mathrm{vqe}} \rangle
+\quad.
+\end{equation}
+Here, the operators $\hat{E}_I$ have the form
+\begin{equation}
+\hat{E}_I \in \{ \hat{a}_{p\sigma} \}_{p\sigma}
+\quad,\quad
+\hat{E}_I \in \{ \hat{a}_{p\sigma} \Big[ \sum_\tau \hat{a}^\dagger_{r\tau} \hat{a}_{s\tau} \Big] \}_{prs,\sigma}
+\quad
+\mbox{undressed/dressed}
+\end{equation}
+and the coefficients $c$ are determined solving the eigenvalue equation
+\begin{equation}
+H \, c = \varepsilon \, S \, c
+\quad,\quad
+\end{equation}
+with
+\begin{equation}
+S_{IJ} = \langle \Psi_{\mathrm{vqe}} | \hat{E}^\dagger_J \hat{E}_I | \Psi_{\mathrm{vqe}} \rangle
+\quad,\quad
+H_{IJ} = \langle \Psi_{\mathrm{vqe}} | \hat{E}^\dagger_J  \hat{H} \hat{E}_I | \Psi_{\mathrm{vqe}} \rangle
+\quad.
+\end{equation}
+
+\subsection{Green's functions}
+
+Green's functions in real-time are defined as
+\begin{equation}
+C_{AB}(t) = \langle \Psi_{\mathrm{vqe}} | A(t) B | \Psi_{\mathrm{vqe}} \rangle \simeq  
+\langle \Psi_{\mathrm{vqe}} | A e^{-i t(H-E_{\mathrm{vqe}})}  B | \Psi_{\mathrm{vqe}} \rangle 
+\end{equation}
+The Lehmann representation is 
+\begin{equation}
+C_{AB}(t) \simeq 
+\sum_\mu \langle \Psi_{\mathrm{vqe}} | A | \Psi_\mu \rangle e^{-i t(\varepsilon_\mu-E_{\mathrm{vqe}})}  \langle \Psi_\mu | B | \Psi_{\mathrm{vqe}} \rangle 
+\rangle 
+\end{equation}
+or equivalently
+\begin{equation}
+C_{AB}(t) \simeq 
+\sum_\mu \langle \Psi_\mu | A^\dagger | \Psi_{\mathrm{vqe}} \rangle^* e^{-i t(\varepsilon_\mu-E_{\mathrm{vqe}})}  \langle \Psi_\mu | B | \Psi_{\mathrm{vqe}} \rangle 
+\end{equation}
+and depends on matrix elements of the form
+\begin{equation}
+X_\mu = \langle \Psi_\mu | B | \Psi_{\mathrm{vqe}} \rangle = \sum_I c_{I\mu}^* \langle \Psi_{\mathrm{vqe}} | \hat{E}_I^\dagger B | \Psi_{\mathrm{vqe}} \rangle
+\end{equation}
+ 
+
+
+
+
+\end{document}
+

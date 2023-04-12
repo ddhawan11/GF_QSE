@@ -1,0 +1,33 @@
+date and time 2023-04-06 14:51:41.736102
+
+PySCF  version 1.7.6 
+Python version 3.8.8 
+numpy  version 1.20.1 
+scipy  version 1.6.2 
+
+qiskit version 
+{'qiskit-terra': '0.18.2', 'qiskit-aer': '0.9.0', 'qiskit-ignis': '0.6.0', 'qiskit-ibmq-provider': '0.16.0', 'qiskit-aqua': '0.9.5', 'qiskit': '0.30.0', 'qiskit-nature': None, 'qiskit-finance': None, 'qiskit-optimization': None, 'qiskit-machine-learning': None}
+eigenvalue 0 = -0.54885195, 0.00376684 
+eigenvector 0, component 0 = -0.69713995, 0.07144551 
+eigenvector 0, component 1 = -0.76716463, 0.08542380 
+-----------------------------------------------------
+eigenvalue 1 = -0.03569540, 0.04264414 
+eigenvector 1, component 0 = 2.77827709, 0.07241352 
+eigenvector 1, component 1 = -2.80879201, 0.08647351 
+-----------------------------------------------------
+eigenvalue 0 = -0.54880402, 0.00377276 
+eigenvector 0, component 0 = -0.69565953, 0.07087338 
+eigenvector 0, component 1 = -0.76861936, 0.08549122 
+-----------------------------------------------------
+eigenvalue 1 = -0.03584821, 0.04307280 
+eigenvector 1, component 0 = 2.78057230, 0.07179113 
+eigenvector 1, component 1 = -2.81062477, 0.08642632 
+-----------------------------------------------------
+eigenvalue 0 = -0.48320377, 0.01871519 
+eigenvector 0, component 0 = 0.20556181, 1.36754691 
+eigenvector 0, component 1 = 1.30483738, 0.69244748 
+-----------------------------------------------------
+eigenvalue 1 = -0.43598547, 0.03094042 
+eigenvector 1, component 0 = -2.09656972, 0.98699887 
+eigenvector 1, component 1 = -1.60975026, 1.11885655 
+-----------------------------------------------------

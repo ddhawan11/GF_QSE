@@ -1,0 +1,99 @@
+date and time 2022-03-08 14:18:49.157206
+
+PySCF  version 1.7.6 
+Python version 3.7.11 
+numpy  version 1.21.2 
+scipy  version 1.7.1 
+
+qiskit version 
+{'qiskit-terra': '0.18.2', 'qiskit-aer': '0.9.0', 'qiskit-ignis': '0.6.0', 'qiskit-ibmq-provider': '0.16.0', 'qiskit-aqua': '0.9.5', 'qiskit': '0.30.0', 'qiskit-nature': None, 'qiskit-finance': None, 'qiskit-optimization': None, 'qiskit-machine-learning': None}
+eigenvalue 0 = -0.58542296 
+eigenvector 0, component 0 = -0.20110323 
+eigenvector 0, component 1 = -0.22738076 
+eigenvector 0, component 2 = -0.05827523 
+eigenvector 0, component 3 = -0.08455277 
+eigenvector 0, component 4 = -0.08455276 
+eigenvector 0, component 5 = -0.05827523 
+eigenvector 0, component 6 = -0.22738077 
+eigenvector 0, component 7 = -0.20110322 
+-----------------------------------------------------
+eigenvalue 1 = -0.06605669 
+eigenvector 1, component 0 = -0.13775703 
+eigenvector 1, component 1 = -0.47714858 
+eigenvector 1, component 2 = 0.25088755 
+eigenvector 1, component 3 = 0.36401806 
+eigenvector 1, component 4 = -0.36401805 
+eigenvector 1, component 5 = -0.25088753 
+eigenvector 1, component 6 = 0.47714857 
+eigenvector 1, component 7 = 0.13775701 
+-----------------------------------------------------
+eigenvalue 0 = -1.89965373 
+eigenvector 0, component 0 = -0.08455276 
+eigenvector 0, component 1 = -0.05827523 
+eigenvector 0, component 2 = -0.22738077 
+eigenvector 0, component 3 = -0.20110322 
+eigenvector 0, component 4 = 0.20110323 
+eigenvector 0, component 5 = 0.22738076 
+eigenvector 0, component 6 = 0.05827523 
+eigenvector 0, component 7 = 0.08455277 
+-----------------------------------------------------
+eigenvalue 1 = -1.38028747 
+eigenvector 1, component 0 = -0.36401805 
+eigenvector 1, component 1 = -0.25088753 
+eigenvector 1, component 2 = 0.47714857 
+eigenvector 1, component 3 = 0.13775701 
+eigenvector 1, component 4 = 0.13775703 
+eigenvector 1, component 5 = 0.47714858 
+eigenvector 1, component 6 = -0.25088755 
+eigenvector 1, component 7 = -0.36401806 
+-----------------------------------------------------
+eigenvalue 0 = -0.58542296 
+eigenvector 0, component 0 = -0.20110323 
+eigenvector 0, component 1 = -0.22738076 
+eigenvector 0, component 2 = -0.05827523 
+eigenvector 0, component 3 = -0.08455277 
+eigenvector 0, component 4 = -0.08455276 
+eigenvector 0, component 5 = -0.05827523 
+eigenvector 0, component 6 = -0.22738077 
+eigenvector 0, component 7 = -0.20110322 
+-----------------------------------------------------
+eigenvalue 1 = -0.06605669 
+eigenvector 1, component 0 = -0.13775703 
+eigenvector 1, component 1 = -0.47714858 
+eigenvector 1, component 2 = 0.25088755 
+eigenvector 1, component 3 = 0.36401806 
+eigenvector 1, component 4 = -0.36401805 
+eigenvector 1, component 5 = -0.25088753 
+eigenvector 1, component 6 = 0.47714857 
+eigenvector 1, component 7 = 0.13775701 
+-----------------------------------------------------
+eigenvalue 0 = -1.89965373 
+eigenvector 0, component 0 = -0.08455276 
+eigenvector 0, component 1 = -0.05827523 
+eigenvector 0, component 2 = -0.22738077 
+eigenvector 0, component 3 = -0.20110322 
+eigenvector 0, component 4 = 0.20110323 
+eigenvector 0, component 5 = 0.22738076 
+eigenvector 0, component 6 = 0.05827523 
+eigenvector 0, component 7 = 0.08455277 
+-----------------------------------------------------
+eigenvalue 1 = -1.38028747 
+eigenvector 1, component 0 = -0.36401805 
+eigenvector 1, component 1 = -0.25088753 
+eigenvector 1, component 2 = 0.47714857 
+eigenvector 1, component 3 = 0.13775701 
+eigenvector 1, component 4 = 0.13775703 
+eigenvector 1, component 5 = 0.47714858 
+eigenvector 1, component 6 = -0.25088755 
+eigenvector 1, component 7 = -0.36401806 
+-----------------------------------------------------
+x elements (1,8) computed 
+C matrix elements (1,8) computed 
+C matrix elements (2,2) computed 
+C matrix elements (2,2) computed 
+C matrix elements (2,4) computed 
+C matrix elements (2,4) computed 
+C matrix elements (2,6) computed 
+C matrix elements (2,6) computed 
+C matrix elements (2,8) computed 
+C matrix elements (2,8) computed 

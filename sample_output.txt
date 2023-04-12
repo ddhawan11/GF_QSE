@@ -1,0 +1,38 @@
+Overwritten attributes  get_hcore get_ovlp  of <class 'pyscf.scf.hf.RHF'>
+/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/gto/mole.py:1084: UserWarning: Function mol.dumps drops attribute nao_nr because it is not JSON-serializable
+  warnings.warn(msg)
+/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/gto/mole.py:1084: UserWarning: Function mol.dumps drops attribute energy_nuc because it is not JSON-serializable
+  warnings.warn(msg)
+PySCF  version  1.7.5.2
+Python version  3.7.9
+numpy  version  1.20.1
+scipy  version  1.6.0
+SCF    computed/expected -1.125315955753 -1.125315 
+CASSCF computed/expected -1.145927514193 -1.145927 
+CASCI  computed/expected -12.302618858968 -1.145927 
+FCI    computed/expected -12.302618858972 -1.145927 
+MP2    computed/expected -1.138507240440 -1.138507 
+Traceback (most recent call last):
+  File "pyscf_issue.py", line 73, in <module>
+    with_custom_hamiltonian(mol_data)
+  File "pyscf_issue.py", line 45, in with_custom_hamiltonian
+    Ee = mc.kernel()[0]+E0
+  File "/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/cc/ccsd.py", line 1025, in kernel
+    return self.ccsd(t1, t2, eris)
+  File "/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/cc/ccsd.py", line 1044, in ccsd
+    verbose=self.verbose)
+  File "/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/cc/ccsd.py", line 69, in kernel
+    t1new, t2new = mycc.update_amps(t1, t2, eris)
+  File "/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/cc/ccsd.py", line 106, in update_amps
+    t2new = mycc._add_vvvv(t1, t2, eris, t2sym='jiba')
+  File "/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/cc/ccsd.py", line 367, in _add_vvvv
+    Ht2tril = _add_vvvv_tril(mycc, t1, t2, eris, with_ovvv=with_ovvv)
+  File "/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/cc/ccsd.py", line 424, in _add_vvvv_tril
+    Ht2tril = eris._contract_vvvv_t2(mycc, tau, mycc.direct, out, log)
+  File "/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/cc/ccsd.py", line 1326, in _contract_vvvv_t2
+    return _contract_vvvv_t2(mycc, self.mol, vvvv, t2, out, verbose)
+  File "/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/cc/ccsd.py", line 471, in _contract_vvvv_t2
+    return _contract_s4vvvv_t2(mycc, mol, vvvv, t2, out, verbose)
+  File "/Users/mario/anaconda3/envs/qiskit2021/lib/python3.7/site-packages/pyscf/cc/ccsd.py", line 484, in _contract_s4vvvv_t2
+    assert(t2.dtype == numpy.double)
+AssertionError

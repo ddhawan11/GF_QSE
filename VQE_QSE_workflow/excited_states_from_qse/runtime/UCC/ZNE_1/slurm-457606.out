@@ -1,0 +1,31 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+/home/ddhawan/GF_runtime/VQE_QSE_workflow/excited_states_from_qse/runtime/UCC/ZNE_1/runtime_calc.py:8: DeprecationWarning: The package qiskit.providers.ibmq is being deprecated. Please see https://ibm.biz/provider_migration_guide to get instructions on how to migrate to qiskit-ibm-provider (https://github.com/Qiskit/qiskit-ibm-provider) and qiskit-ibm-runtime (https://github.com/Qiskit/qiskit-ibm-runtime).
+  IBMQ.load_account()
+/home/ddhawan/GF_runtime/VQE_QSE_workflow/excited_states_from_qse/runtime/UCC/ZNE_1/runtime_calc.py:8: DeprecationWarning: The qiskit.IBMQ entrypoint and the qiskit-ibmq-provider package (accessible from 'qiskit.providers.ibmq`) are deprecated and will be removed in a future release. Instead you should use the qiskit-ibm-provider package which is accessible from 'qiskit_ibm_provider'. You can install it with 'pip install qiskit_ibm_provider'. Just replace 'qiskit.IBMQ' with 'qiskit_ibm_provider.IBMProvider'
+  IBMQ.load_account()
+Traceback (most recent call last):
+  File "/home/ddhawan/GF_runtime/VQE_QSE_workflow/excited_states_from_qse/runtime/UCC/ZNE_1/runtime_calc.py", line 72, in <module>
+    circ = np.load("pauli_exp_circ.npy", allow_pickle=True).item()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ddhawan/anaconda3/envs/runtime/lib/python3.11/site-packages/numpy/lib/npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'pauli_exp_circ.npy'
