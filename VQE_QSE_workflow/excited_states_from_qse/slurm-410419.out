@@ -1,0 +1,40 @@
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/__init__.py:86: DeprecationWarning: The package qiskit.aqua is deprecated. It was moved/refactored to qiskit-terra For more information see <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>
+  warn_package('aqua', 'qiskit-terra')
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/chemistry/__init__.py:170: DeprecationWarning: The package qiskit.chemistry is deprecated. It was moved/refactored to qiskit_nature (pip install qiskit-nature). For more information see <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>
+  warn_package('chemistry', 'qiskit_nature', 'qiskit-nature')
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/pyscf/lib/misc.py:46: H5pyDeprecationWarning: Using default_file_mode other than 'r' is deprecated. Pass the mode to h5py.File() instead.
+  h5py.get_config().default_file_mode = 'a'
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/chemistry/fermionic_operator.py:394: DeprecationWarning: The variable qiskit.aqua.aqua_globals is deprecated. It was moved/refactored to qiskit.utils.algorithm_globals (pip install qiskit-terra). For more information see <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>
+  task_args=(threshold,), num_processes=aqua_globals.num_processes)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/__init__.py:86: DeprecationWarning: The package qiskit.aqua is deprecated. It was moved/refactored to qiskit-terra For more information see <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>
+  warn_package('aqua', 'qiskit-terra')
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/quantum_instance.py:137: DeprecationWarning: The class qiskit.aqua.QuantumInstance is deprecated. It was moved/refactored to qiskit.utils.QuantumInstance (pip install qiskit-terra). For more information see <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>
+  'qiskit-terra')
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/operators/legacy/weighted_pauli_operator.py:284: DeprecationWarning: The package qiskit.aqua.operators is deprecated. It was moved/refactored to qiskit.opflow (pip install qiskit-terra). For more information see <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>
+  ret_op = WeightedPauliOperator(paulis=[])
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/operators/legacy/weighted_pauli_operator.py:734: DeprecationWarning: The `SnapshotExpectationValue` instruction has been deprecated as of qiskit-aer 0.9. It has been superseded by the `SaveExpectationValue` and `SaveExpectationValueVariance` instructions.
+  snapshot = SnapshotExpectationValue('expval', self.paulis)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/providers/aer/extensions/snapshot_expectation_value.py:88: DeprecationWarning: The `Snapshot` instruction will be deprecated in the future. It has been superseded by the `SaveStatevector` instructions.
+  params=params)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/utils/deprecation.py:62: DeprecationWarning: Using a qobj for run() is deprecated as of qiskit-aer 0.9.0 and will be removed no sooner than 3 months from that release date. Transpiled circuits should now be passed directly using `backend.run(circuits, **run_options).
+  return func(*args, **kwargs)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/operators/legacy/weighted_pauli_operator.py:734: DeprecationWarning: The `SnapshotExpectationValue` instruction has been deprecated as of qiskit-aer 0.9. It has been superseded by the `SaveExpectationValue` and `SaveExpectationValueVariance` instructions.
+  snapshot = SnapshotExpectationValue('expval', self.paulis)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/providers/aer/extensions/snapshot_expectation_value.py:88: DeprecationWarning: The `Snapshot` instruction will be deprecated in the future. It has been superseded by the `SaveStatevector` instructions.
+  params=params)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/__init__.py:86: DeprecationWarning: The package qiskit.aqua is deprecated. It was moved/refactored to qiskit-terra For more information see <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>
+  warn_package('aqua', 'qiskit-terra')
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/quantum_instance.py:137: DeprecationWarning: The class qiskit.aqua.QuantumInstance is deprecated. It was moved/refactored to qiskit.utils.QuantumInstance (pip install qiskit-terra). For more information see <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>
+  'qiskit-terra')
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/operators/legacy/weighted_pauli_operator.py:284: DeprecationWarning: The package qiskit.aqua.operators is deprecated. It was moved/refactored to qiskit.opflow (pip install qiskit-terra). For more information see <https://github.com/Qiskit/qiskit-aqua/blob/main/README.md#migration-guide>
+  ret_op = WeightedPauliOperator(paulis=[])
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/operators/legacy/weighted_pauli_operator.py:734: DeprecationWarning: The `SnapshotExpectationValue` instruction has been deprecated as of qiskit-aer 0.9. It has been superseded by the `SaveExpectationValue` and `SaveExpectationValueVariance` instructions.
+  snapshot = SnapshotExpectationValue('expval', self.paulis)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/providers/aer/extensions/snapshot_expectation_value.py:88: DeprecationWarning: The `Snapshot` instruction will be deprecated in the future. It has been superseded by the `SaveStatevector` instructions.
+  params=params)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/utils/deprecation.py:62: DeprecationWarning: Using a qobj for run() is deprecated as of qiskit-aer 0.9.0 and will be removed no sooner than 3 months from that release date. Transpiled circuits should now be passed directly using `backend.run(circuits, **run_options).
+  return func(*args, **kwargs)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/aqua/operators/legacy/weighted_pauli_operator.py:734: DeprecationWarning: The `SnapshotExpectationValue` instruction has been deprecated as of qiskit-aer 0.9. It has been superseded by the `SaveExpectationValue` and `SaveExpectationValueVariance` instructions.
+  snapshot = SnapshotExpectationValue('expval', self.paulis)
+/home/ddhawan/anaconda3/envs/qiskit_env/lib/python3.7/site-packages/qiskit/providers/aer/extensions/snapshot_expectation_value.py:88: DeprecationWarning: The `Snapshot` instruction will be deprecated in the future. It has been superseded by the `SaveStatevector` instructions.
+  params=params)

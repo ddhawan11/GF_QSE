@@ -1,0 +1,86 @@
+import numpy as np
+##############
+def read_gf_T(filename, nmo, iwmax):
+
+    file1 = open(filename, "r")
+    GF    = np.zeros((iwmax,nmo,nmo), dtype='complex')
+    omega = np.zeros(iwmax)
+    w = -1
+    for a, line in enumerate(file1.readlines()):
+        toks = line.split()
+#        w    += 1#int(toks[0])
+        p    = int(toks[1])
+        q    = int(toks[2])
+        if (p==0 and q==1):
+            w += 1
+        if (len(toks) == 5):           
+            omega[w]  = complex(toks[0]).imag
+            GF[w,p,q] = float(toks[3])+float(toks[4])*1j
+        elif(len(toks) == 4):
+            omega[w]  = complex(toks[0]).imag
+            GF[w,p,q] = complex(toks[3])
+
+    return omega, GF
+
+##############
+import matplotlib.pyplot as plt
+fig,axs = plt.subplots(2)
+plt.subplots_adjust(wspace=0.4,hspace=0.4)
+p = 0
+q = 100
+# nmo   = 4
+# iwmax = 3000
+# nmax = iwmax
+# beta = 100
+# omega, GF = read_gf_T("self_energy_elements.txt", nmo, iwmax)
+# x_mesh = [(2*n+1)*np.pi/beta for n in range(0,nmax+1)]
+# print(GF)
+# for i in range(nmo):
+#      for j in range(nmo):
+#          if (i==0 and j==0):
+#              x = x_mesh
+#              y = GF[:,i,j].real
+#              axs[0].plot(x[p:q],y[p:q],label='Re $\Sigma_{00}$(i$\omega$)(FCI)(%d,%d)'%(i,j))
+#              y = GF[:,i,j].imag
+#              axs[1].plot(x[p:q],y[p:q],label='Im $\Sigma_{00}$(i$\omega$)(FCI)(%d,%d)'%(i,j))
+
+
+
+
+green_full = np.load('qse_self_energy_freq_fci.npy',allow_pickle=True)
+green_qse = np.load('qse_self_energy_freq.npy',allow_pickle=True)
+
+a = 4
+beta   = 100.0
+nmax   = 2000
+x_mesh = [(2*n+1)*np.pi/beta for n in range(0,nmax+1)]
+nx     = len(x_mesh)
+
+for i in range(a):
+     for j in range(a):
+         if (i==0 and j==0):
+             x  = x_mesh
+             y  = green_full[:,i,j].real
+             axs[0].errorbar(x[p:q],y[p:q],label='re $\Sigma_{00}$(i$\omega$)(FCI)(%d,%d)'%(i,j))
+             y  = green_full[:,i,j].imag
+             axs[1].errorbar(x[p:q],y[p:q],label='im $\Sigma_{00}$(i$\omega$)(FCI)(%d,%d)'%(i,j))
+             x  = x_mesh
+             y  = green_qse[:,i,j].real
+             axs[0].errorbar(x[p:q],y[p:q],label='re $\Sigma_{00}$(i$\omega$)(QSE)(%d,%d)'%(i,j))
+             y  = green_qse[:,i,j].imag
+             axs[1].errorbar(x[p:q],y[p:q],label='im $\Sigma_{00}$(i$\omega$)(QSE)(%d,%d)'%(i,j))
+
+
+axs[0].set_title('imaginary-freq Self-Energy, real part')
+axs[1].set_title('imaginary-freq Self-Energy, imag part')
+# ---
+axs[0].legend()
+axs[1].legend()
+axs[0].set_ylabel("Re[$\Sigma_{00}$(i$\omega$)]")
+#axs[0].set_xlabel("Frequency")
+axs[1].set_ylabel("Im[$\Sigma_{00}$(i$\omega$)]")
+axs[1].set_xlabel("Frequency")
+# ---
+plt.show()
+
+

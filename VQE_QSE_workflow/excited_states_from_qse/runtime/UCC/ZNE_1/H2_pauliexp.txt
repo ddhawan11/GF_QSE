@@ -1,0 +1,26 @@
+Before optimization:
+depth  77
+opers  OrderedDict([('cx', 60), ('u', 58)])
+depth  110
+opers  OrderedDict([('rz', 77), ('sx', 51), ('cx', 41), ('x', 4)])
+After optimization:
+depth  110
+opers  OrderedDict([('rz', 77), ('sx', 51), ('cx', 41), ('x', 4)])
+[[[0. 0.]
+  [0. 0.]]
+
+ [[0. 0.]
+  [0. 0.]]] [[[0. 0.]
+  [0. 0.]]
+
+ [[0. 0.]
+  [0. 0.]]]
+[[[0. 0.]
+  [0. 0.]]
+
+ [[0. 0.]
+  [0. 0.]]] [[[0. 0.]
+  [0. 0.]]
+
+ [[0. 0.]
+  [0. 0.]]]

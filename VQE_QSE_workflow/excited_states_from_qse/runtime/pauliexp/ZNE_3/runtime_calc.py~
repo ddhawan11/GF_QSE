@@ -1,0 +1,107 @@
+import numpy as np
+from qiskit import IBMQ
+from qiskit_ibm_runtime import QiskitRuntimeService, Session, Options
+from qiskit_ibm_runtime import Estimator as my_runtime_estimator
+from qiskit.opflow.primitive_ops.primitive_op import SparsePauliOp
+from qiskit.compiler import transpile
+
+IBMQ.load_account()
+provider_open= IBMQ.get_provider(hub= "ibm-q", group="open", project="main")
+
+#service = QiskitRuntimeService()
+#service_backend= service.backend('ibmq_jakarta')
+service = QiskitRuntimeService(channel="ibm_quantum")
+service_backend = service.get_backend("simulator_statevector")
+#-------------------------------------------------------------------------------------------#                                                                         
+options_ZNE = Options()
+options_ZNE.optimization_level         = 3
+options_ZNE.resilience_level           = 1 #Readout error mitigation                                                                                                  
+#options_ZNE.resilience.noise_factors   = (1,2,2.5) #noise scaling for ZNE                                                                                            
+#options_ZNE.resilience.noise_amplifier = "GlobalFoldingAmplifier" #so ZNE CNOT local folding                                                                         
+#options_ZNE.resilience.extrapolator    = "QuadraticExtrapolator"#choice of extrapolation for ZNE                                                                     
+options_ZNE.execution.shots            = 10000
+
+def convert_to_oper(dict):
+    pauli_list = []
+    for term in dict['paulis']:
+        label = term['label']
+        coeff = term['coeff']['real'] + 1j * term['coeff']['imag']
+        pauli_list.append((label, coeff))
+
+    H1 = SparsePauliOp.from_list(pauli_list)
+    return H1
+
+def evaluate_expectation(circuits, sp_pauli_ops):
+
+    '''                                                                                                                                                               
+    Function that takes a list of circuits and a list of SparsePauliOP objects (where each object corresponds to the circuit with the same index)                     
+    and returns a list of the corresponding ZNE mitigated energy expectation values with corresponding indices.                                                       
+                                                                                                                                                                      
+    Args:                                                                                                                                                             
+    circuits (list[string]): list with the circuits                                                                                                                   
+    sp_pauli_ops (list[string]): list with the Sparse Pauli Operators, where the i'th object will be used with the i'th circuit                                       
+                                                                                                                                                                      
+    returns:                                                                                                                                                          
+    array of expectation values. The i'th value corresponds to the expectation value of the ith operator measured using                                               
+    the state prepared with the ith circuit                                                                                                                           
+                                                                                                                                                                      
+    '''
+
+    with Session(service=service,backend=service_backend):
+
+        estimator_oslo_ZNE = my_runtime_estimator(options=options_ZNE)
+        job = estimator_oslo_ZNE.run(circuits=circuits, observables=sp_pauli_ops).result()
+        results = job.values
+        print(results, job.metadata[0]["variance"])
+
+    return [np.real(results[0]), np.real(job.metadata[0]["variance"])]
+
+from qiskit import QuantumCircuit
+from qiskit.quantum_info import Pauli
+from qiskit.quantum_info import SparsePauliOp
+
+qasm_calc = np.load('HS00_operator_ip.npy',allow_pickle=True).item()
+psi = qasm_calc['psi']
+qc_from_string = QuantumCircuit.from_qasm_str(psi)
+
+print("Before optimization:")
+print("depth ",qc_from_string.depth())
+print("opers ",qc_from_string.count_ops())
+
+
+circ = np.load("pauli_exp_circ.npy", allow_pickle=True).item()
+transpiled_circ = circ["circ"]
+print("After optimization:")
+print("depth ",transpiled_circ.depth())
+print("opers ",transpiled_circ.count_ops())
+
+for calc in ["ip", "ea"]:
+    H = np.zeros((2,2,2))
+    S = np.zeros((2,2,2))
+    for i in range(2):
+        for j in range(i+1):
+            qasm_calc = np.load('HS'+str(j)+str(i)+'_operator_'+calc+'.npy',allow_pickle=True).item()
+            Hij_oper = qasm_calc['Hij_oper']
+            Sij_oper = qasm_calc['Sij_oper']
+            pauliH_oper = convert_to_oper(Hij_oper)
+            pauliS_oper = convert_to_oper(Sij_oper)
+            print("HS Matrix", i,j)
+            H[i,j,:] = evaluate_expectation([transpiled_circ], [pauliH_oper])
+            S[i,j,:] = evaluate_expectation([transpiled_circ], [pauliS_oper])
+
+            np.save("QSE_matrixelements_"+calc+".npy", {'H':H, 'S':S}, allow_pickle=True)
+    print(H, S)
+
+    C = np.zeros((2,2,2))
+    for i in range(2):
+        for j in range(2):
+            qasm_calc = np.load('C'+str(j)+str(i)+'_operator_'+calc+'.npy',allow_pickle=True).item()
+            Cij_oper = qasm_calc['Cij_oper']
+
+            pauliC_oper = convert_to_oper(Cij_oper)
+        
+            print("CMatrix", i,j)
+            C[i,j,:] = evaluate_expectation([transpiled_circ], [pauliC_oper])
+
+            np.save("QSE_transitionmatrixelements_"+calc+".npy", {'C':C}, allow_pickle=True)
+    print(C)

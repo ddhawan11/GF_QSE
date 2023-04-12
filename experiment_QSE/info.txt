@@ -1,0 +1,6 @@
+date and time 2021-07-07 13:46:16.125611
+
+git commit b'"15afbccfdf25e68742c0a570043da3f4e2e381b1"'
+
+qiskit version 
+{'qiskit-terra': '0.16.1', 'qiskit-aer': '0.7.2', 'qiskit-ignis': '0.5.1', 'qiskit-ibmq-provider': '0.11.1', 'qiskit-aqua': '0.8.1', 'qiskit': '0.23.2'}

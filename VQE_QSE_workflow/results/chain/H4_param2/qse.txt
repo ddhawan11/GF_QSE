@@ -1,0 +1,209 @@
+date and time 2021-08-12 14:57:49.659792
+
+PySCF  version 1.7.6 
+Python version 3.8.8 
+numpy  version 1.20.1 
+scipy  version 1.6.2 
+
+qiskit version 
+{'qiskit-terra': '0.17.4', 'qiskit-aer': '0.8.2', 'qiskit-ignis': '0.6.0', 'qiskit-ibmq-provider': '0.14.0', 'qiskit-aqua': '0.9.2', 'qiskit': '0.27.0', 'qiskit-nature': None, 'qiskit-finance': None, 'qiskit-optimization': None, 'qiskit-machine-learning': None}
+S,H matrix elements (1/4,1/4) computed 
+times op,taper,measure 0.058808 0.000001 2.691182  
+S,H matrix elements (1/4,2/4) computed 
+times op,taper,measure 0.062236 0.000001 2.141342  
+S,H matrix elements (1/4,3/4) computed 
+times op,taper,measure 0.063108 0.000001 2.027034  
+S,H matrix elements (1/4,4/4) computed 
+times op,taper,measure 0.062931 0.000001 2.141721  
+S,H matrix elements (2/4,2/4) computed 
+times op,taper,measure 0.063102 0.000001 2.046231  
+S,H matrix elements (2/4,3/4) computed 
+times op,taper,measure 0.062920 0.000002 2.141455  
+S,H matrix elements (2/4,4/4) computed 
+times op,taper,measure 0.068959 0.000001 2.090405  
+S,H matrix elements (3/4,3/4) computed 
+times op,taper,measure 0.053889 0.000001 2.114076  
+S,H matrix elements (3/4,4/4) computed 
+times op,taper,measure 0.063988 0.000001 2.058026  
+S,H matrix elements (4/4,4/4) computed 
+times op,taper,measure 0.056824 0.000002 2.093347  
+C matrix elements (1/4,1/4) computed 
+times op,taper,measure 0.000587 0.000001 1.007406  
+C matrix elements (1/4,2/4) computed 
+times op,taper,measure 0.000733 0.000001 1.016415  
+C matrix elements (1/4,3/4) computed 
+times op,taper,measure 0.000763 0.000001 1.082499  
+C matrix elements (1/4,4/4) computed 
+times op,taper,measure 0.001036 0.000002 1.022589  
+C matrix elements (2/4,1/4) computed 
+times op,taper,measure 0.000777 0.000001 1.032031  
+C matrix elements (2/4,2/4) computed 
+times op,taper,measure 0.000645 0.000001 1.012577  
+C matrix elements (2/4,3/4) computed 
+times op,taper,measure 0.000660 0.000001 1.008859  
+C matrix elements (2/4,4/4) computed 
+times op,taper,measure 0.000743 0.000001 1.118589  
+C matrix elements (3/4,1/4) computed 
+times op,taper,measure 0.000957 0.000001 1.045935  
+C matrix elements (3/4,2/4) computed 
+times op,taper,measure 0.000690 0.000001 1.011396  
+C matrix elements (3/4,3/4) computed 
+times op,taper,measure 0.000590 0.000001 1.020455  
+C matrix elements (3/4,4/4) computed 
+times op,taper,measure 0.000749 0.000001 1.111462  
+C matrix elements (4/4,1/4) computed 
+times op,taper,measure 0.000945 0.000001 1.025575  
+C matrix elements (4/4,2/4) computed 
+times op,taper,measure 0.000810 0.000001 1.011115  
+C matrix elements (4/4,3/4) computed 
+times op,taper,measure 0.000726 0.000001 1.049608  
+C matrix elements (4/4,4/4) computed 
+times op,taper,measure 0.000647 0.000001 1.026991  
+S,H matrix elements (1/4,1/4) computed 
+times op,taper,measure 0.059920 0.000001 2.114065  
+S,H matrix elements (1/4,2/4) computed 
+times op,taper,measure 0.067555 0.000001 2.124039  
+S,H matrix elements (1/4,3/4) computed 
+times op,taper,measure 0.074090 0.000002 2.069043  
+S,H matrix elements (1/4,4/4) computed 
+times op,taper,measure 0.068133 0.000001 2.154917  
+S,H matrix elements (2/4,2/4) computed 
+times op,taper,measure 0.055452 0.000001 2.050292  
+S,H matrix elements (2/4,3/4) computed 
+times op,taper,measure 0.059520 0.000002 2.140645  
+S,H matrix elements (2/4,4/4) computed 
+times op,taper,measure 0.061041 0.000001 2.089539  
+S,H matrix elements (3/4,3/4) computed 
+times op,taper,measure 0.057585 0.000001 2.139197  
+S,H matrix elements (3/4,4/4) computed 
+times op,taper,measure 0.066552 0.000002 2.084855  
+S,H matrix elements (4/4,4/4) computed 
+times op,taper,measure 0.057803 0.000001 2.145696  
+C matrix elements (1/4,1/4) computed 
+times op,taper,measure 0.000585 0.000001 1.028732  
+C matrix elements (1/4,2/4) computed 
+times op,taper,measure 0.000617 0.000001 1.020566  
+C matrix elements (1/4,3/4) computed 
+times op,taper,measure 0.000734 0.000001 1.073346  
+C matrix elements (1/4,4/4) computed 
+times op,taper,measure 0.001113 0.000002 1.040085  
+C matrix elements (2/4,1/4) computed 
+times op,taper,measure 0.000631 0.000000 1.008057  
+C matrix elements (2/4,2/4) computed 
+times op,taper,measure 0.000595 0.000001 1.028411  
+C matrix elements (2/4,3/4) computed 
+times op,taper,measure 0.000737 0.000001 1.006779  
+C matrix elements (2/4,4/4) computed 
+times op,taper,measure 0.000632 0.000001 1.089026  
+C matrix elements (3/4,1/4) computed 
+times op,taper,measure 0.000941 0.000001 1.019487  
+C matrix elements (3/4,2/4) computed 
+times op,taper,measure 0.000652 0.000001 1.009694  
+C matrix elements (3/4,3/4) computed 
+times op,taper,measure 0.000548 0.000001 1.045821  
+C matrix elements (3/4,4/4) computed 
+times op,taper,measure 0.000737 0.000001 1.104543  
+C matrix elements (4/4,1/4) computed 
+times op,taper,measure 0.000916 0.000001 1.016907  
+C matrix elements (4/4,2/4) computed 
+times op,taper,measure 0.000762 0.000001 1.016216  
+C matrix elements (4/4,3/4) computed 
+times op,taper,measure 0.000799 0.000001 1.020586  
+C matrix elements (4/4,4/4) computed 
+times op,taper,measure 0.000582 0.000001 1.000453  
+eigenvalue 0 = -1.86604356 
+eigenvector 0, component 0 = -0.58271810 
+eigenvector 0, component 1 = -0.43708332 
+eigenvector 0, component 2 = 0.43708277 
+eigenvector 0, component 3 = 0.58271859 
+-----------------------------------------------------
+eigenvalue 1 = -1.64819079 
+eigenvector 1, component 0 = 0.30247571 
+eigenvector 1, component 1 = 0.65416619 
+eigenvector 1, component 2 = 0.65416513 
+eigenvector 1, component 3 = 0.30247649 
+-----------------------------------------------------
+eigenvalue 2 = -1.38322532 
+eigenvector 2, component 0 = -2.57429944 
+eigenvector 2, component 1 = 1.66589594 
+eigenvector 2, component 2 = 1.66590238 
+eigenvector 2, component 3 = -2.57430468 
+-----------------------------------------------------
+eigenvalue 3 = -1.15230769 
+eigenvector 3, component 0 = -3.08046816 
+eigenvector 3, component 1 = 4.89134311 
+eigenvector 3, component 2 = -4.89134128 
+eigenvector 3, component 3 = 3.08046625 
+-----------------------------------------------------
+eigenvalue 0 = -1.95603088 
+eigenvector 0, component 0 = -0.61827371 
+eigenvector 0, component 1 = 0.38237525 
+eigenvector 0, component 2 = 0.38237556 
+eigenvector 0, component 3 = -0.61827329 
+-----------------------------------------------------
+eigenvalue 1 = -1.49572288 
+eigenvector 1, component 0 = -2.59541509 
+eigenvector 1, component 1 = -1.71100928 
+eigenvector 1, component 2 = 1.71100625 
+eigenvector 1, component 3 = 2.59541183 
+-----------------------------------------------------
+eigenvalue 2 = -1.41611252 
+eigenvector 2, component 0 = 0.63237895 
+eigenvector 2, component 1 = -0.44024665 
+eigenvector 2, component 2 = 0.44024729 
+eigenvector 2, component 3 = -0.63237834 
+-----------------------------------------------------
+eigenvalue 3 = -1.01477939 
+eigenvector 3, component 0 = -2.99902424 
+eigenvector 3, component 1 = -4.55782102 
+eigenvector 3, component 2 = -4.55782658 
+eigenvector 3, component 3 = -2.99903200 
+-----------------------------------------------------
+eigenvalue 0 = -1.86604356 
+eigenvector 0, component 0 = -0.58271810 
+eigenvector 0, component 1 = -0.43708332 
+eigenvector 0, component 2 = 0.43708277 
+eigenvector 0, component 3 = 0.58271859 
+-----------------------------------------------------
+eigenvalue 1 = -1.64819079 
+eigenvector 1, component 0 = 0.30247571 
+eigenvector 1, component 1 = 0.65416619 
+eigenvector 1, component 2 = 0.65416513 
+eigenvector 1, component 3 = 0.30247649 
+-----------------------------------------------------
+eigenvalue 2 = -1.38322532 
+eigenvector 2, component 0 = -2.57429944 
+eigenvector 2, component 1 = 1.66589594 
+eigenvector 2, component 2 = 1.66590238 
+eigenvector 2, component 3 = -2.57430468 
+-----------------------------------------------------
+eigenvalue 3 = -1.15230769 
+eigenvector 3, component 0 = -3.08046816 
+eigenvector 3, component 1 = 4.89134311 
+eigenvector 3, component 2 = -4.89134128 
+eigenvector 3, component 3 = 3.08046625 
+-----------------------------------------------------
+eigenvalue 0 = -1.95603088 
+eigenvector 0, component 0 = -0.61827371 
+eigenvector 0, component 1 = 0.38237525 
+eigenvector 0, component 2 = 0.38237556 
+eigenvector 0, component 3 = -0.61827329 
+-----------------------------------------------------
+eigenvalue 1 = -1.49572288 
+eigenvector 1, component 0 = -2.59541509 
+eigenvector 1, component 1 = -1.71100928 
+eigenvector 1, component 2 = 1.71100625 
+eigenvector 1, component 3 = 2.59541183 
+-----------------------------------------------------
+eigenvalue 2 = -1.41611252 
+eigenvector 2, component 0 = 0.63237895 
+eigenvector 2, component 1 = -0.44024665 
+eigenvector 2, component 2 = 0.44024729 
+eigenvector 2, component 3 = -0.63237834 
+-----------------------------------------------------
+eigenvalue 3 = -1.01477939 
+eigenvector 3, component 0 = -2.99902424 
+eigenvector 3, component 1 = -4.55782102 
+eigenvector 3, component 2 = -4.55782658 
+eigenvector 3, component 3 = -2.99903200 
+-----------------------------------------------------
